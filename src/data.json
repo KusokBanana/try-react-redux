@@ -1,0 +1,77 @@
+{
+    "points": [{
+        "id": 1,
+        "name": "Some Point",
+        "date": "01.01.19",
+        "rate": 28,
+        "completed": false
+    }, {
+        "id": 2,
+        "name": "Some Point 2",
+        "date": "20.01.19",
+        "rate": 10,
+        "completed": false
+    }],
+    "skills": [{
+        "name": "Some Skill 1",
+        "id": 1,
+        "pointId": 1,
+        "rate": 40,
+        "completed": false
+    }, {
+        "name": "Some Skill 2",
+        "id": 2,
+        "pointId": 1,
+        "rate": 100,
+        "completed": false
+    }, {
+        "name": "Some Skill 3",
+        "id": 3,
+        "pointId": 1,
+        "rate": 0,
+        "completed": false
+    }, {
+        "name": "Some Skill 4",
+        "id": 4,
+        "pointId": 2,
+        "rate": 0,
+        "completed": false
+    }, {
+        "name": "Some Skill 5",
+        "id": 5,
+        "pointId": 2,
+        "rate": 0,
+        "completed": false
+    }],
+    "checkpoints": [{
+            "name": "Some checkpoint 1",
+            "done": false,
+            "skillId": 1
+        },
+        {
+            "name": "Some checkpoint 2",
+            "done": false,
+            "skillId": 1
+        },
+        {
+            "name": "Some checkpoint 3",
+            "done": false,
+            "skillId": 1
+        },
+        {
+            "name": "Some checkpoint 4",
+            "done": true,
+            "skillId": 1
+        },
+        {
+            "name": "Some checkpoint 5",
+            "done": true,
+            "skillId": 1
+        },
+        {
+            "name": "Some checkpoint 6",
+            "done": true,
+            "skillId": 2
+        }
+    ]
+}
