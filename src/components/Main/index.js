@@ -14,7 +14,7 @@ class Main extends Component {
         <p>Count: {this.props.points.length}</p>
         <section>
           {this.props.points.map(point => (
-            <Point data={point} />
+            <Point id={point.id} key={point.id} />
           ))}
         </section>
       </>

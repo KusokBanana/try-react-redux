@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 
 class Skill extends Component {
+  constructor(props) {
+    super(props);
+    this.i = 0;
+  }
+
+  // shouldComponentUpdate(newProps) {
+  //   console.log(newProps);
+  //   return parent.shouldComponentUpdate(newProps);;
+  // }
+
   render() {
     const { data } = this.props;
     const { completeSkill } = this.props.actions;
@@ -24,7 +34,9 @@ class Skill extends Component {
 
     return (
       <>
-        <span>{item}</span>
+        <span>
+          {item} ({this.i++})
+        </span>
       </>
     );
   }

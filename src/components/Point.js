@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import Skill from "../containers/Skill";
 
 class Point extends Component {
+  constructor(props) {
+    super(props);
+    this.i = 0;
+  }
+
   render() {
     const { data, skills } = this.props;
     debugger;
@@ -28,13 +33,15 @@ class Point extends Component {
 
     return (
       <>
-        <span>{item}</span>
+        <span>
+          {item} ({this.i++})
+        </span>
       </>
     );
   }
 
   getChilds(skills) {
-    return skills.map(skill => <Skill data={skill} />);
+    return skills.map(skill => <Skill id={skill.id} key={skill.id} />);
   }
 }
 

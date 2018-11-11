@@ -1,14 +1,15 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import Point from "../components/Point";
-import { getSkills, makeGetSkills } from "../selectors";
+import { getSkills, makeGetSkills, getPoint } from "../selectors";
 import { creator } from "../actions/points";
 
 const makeMapStateToProps = () => {
   const getSkillsMaker = makeGetSkills();
   const mapStateToProps = (state, props) => {
     return {
-      skills: getSkillsMaker(state, props)
+      data: getPoint(state, props.id),
+      skills: getSkillsMaker(state, props.id)
     };
   };
   return mapStateToProps;
@@ -16,7 +17,8 @@ const makeMapStateToProps = () => {
 
 const mapStateToProps = (state, props) => {
   return {
-    skills: getSkills(state, props)
+    data: state.points.filter(point => point.id === props.id)[0],
+    skills: getSkills(state, props.id)
   };
 };
 
@@ -25,6 +27,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  makeMapStateToProps,
+  mapStateToProps,
   mapDispatchToProps
 )(Point);

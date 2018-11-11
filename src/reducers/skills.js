@@ -4,6 +4,7 @@ import data from "../data.json";
 export default function skills(state = data.skills, action) {
   switch (action.type) {
     case types.COMPLETE_SKILL:
+      debugger;
       return state.map(skill => {
         if (action.payload === skill.id) {
           skill.completed = !skill.completed;
